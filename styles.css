@@ -11,7 +11,7 @@ body {
 #img-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -40,8 +40,9 @@ section h2 {
     margin: 0;
     text-transform: uppercase;
     align-self: flex-start;
-    transform: rotate(90deg) translateX(60px);
+    transform: translateX(15px);
     font-size: 10px;
+    writing-mode: vertical-lr;
 }
 
 .name {
@@ -54,23 +55,26 @@ section h2 {
     width: 100%;
     max-width: 140px;
     height: auto;
+    border-radius: 20px;
 }
 
 footer {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #A9A9A9;
     margin-top: 10rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 892px) {
+    body {
+        padding-left: 50px;
+    }
     #text-container {
         display: flex;
         justify-content: space-around;
     }
     #img-container {
         grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
     }
     .card:nth-of-type(even) {
         margin: 0;
@@ -83,5 +87,11 @@ footer {
     }
     .image {
         max-width: 240px;
+    }
+    .name {
+        font-size: 18px;
+    }
+    .position {
+        font-size: 12px;
     }
 }
